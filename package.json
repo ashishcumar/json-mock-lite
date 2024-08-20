@@ -1,6 +1,6 @@
 {
   "name": "json-mock-lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "json-mock-lite is a lightweight Node.js package for generating sample JSON data based on custom JSON Schema definitions. Ideal for testing and development, this package allows you to create realistic mock data that adheres to your specified schema structure. With support for various JSON Schema types and constraints, json-mock-lite helps streamline your development process by providing consistent and accurate data generation without the need for external dependencies.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
