@@ -6,6 +6,8 @@
 ![Lightweight](https://img.shields.io/badge/lightweight-12kb-green)
 ![Fast](https://img.shields.io/badge/fast-12kb-blue)
 ![Npm-Version](https://img.shields.io/npm/v/json-mock-lite.svg)
+![Trusted](https://img.shields.io/badge/trusted-1kb-orange)
+![No Dependency](https://img.shields.io/badge/dependencies-none-brightgreen)
 
 ## Features
 
