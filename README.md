@@ -18,7 +18,7 @@ npm install json-mock-lite
 ## Usage
 
 ```
-const jsonMockLite = require('json-mock-lite');
+import mock from "json-mock-lite";
 
 const schema = {
   type: 'object',
@@ -28,7 +28,7 @@ const schema = {
   }
 };
 
-const mockData = jsonMockLite.generate(schema);
+const mockData = mock(schema);
 
 console.log(mockData);
 // Output: { name: 'John Doe', age: 30 }
@@ -36,12 +36,18 @@ console.log(mockData);
 
 
 ## Supported JSON Schema Types
- 
- - `string`  `integer` `number` `boolean` `array` `object`
+- `string`
+- `integer`
+- `number`
+- `boolean`
+- `array`
+- `object`
 
 ## Supported JSON Schema Constraints
-
-- `minLength` `maxLength` `minimum` `maximum`
+- `minLength`: Sets the minimum length of a string.
+- `maxLength`: Sets the maximum length of a string.
+- `minimum`: Sets the minimum value for a number or integer.
+- `maximum`: Sets the maximum value for a number or integer.
 
 ## JSON Schema Basics
 
@@ -66,34 +72,43 @@ Example:-
 "items": {"type": "string"}
 ```
 
-- **MinLength** and **MaxLength**: Specify the minimum and maximum length of a string value.
+- **String Constraints**
+    - `minLength`: Minimum length of a string.
+    - `maxLength`: Maximum length of a string.
 
 ```
-Example:-
-
-"type": "string",
-"minLength": 3,
-"maxLength": 10
-```
-- **Minimum** and **Maximum**: Specify the minimum and maximum value of a number or integer value.
-
-```
-Example:-
-
-"type": "integer",
-"minimum": 18,
-"maximum": 99
-```
-- **MinItems** and **MaxItems**: Specify the minimum and maximum number of items in an array.
-```
-Example:-
-
-"type": "array",
-"minItems": 5,
-"maxItems": 10
+{
+  "type": "string",
+  "minLength": 3,
+  "maxLength": 10
+}
 ```
 
-**Nested Structures** :-
+- **Number Constraints**
+   - `minimum`: Minimum value for a number or integer.
+   - `maximum`: Maximum value for a number or integer.
+
+```
+{
+  "type": "integer",
+  "minimum": 18,
+  "maximum": 99
+}
+```
+
+- **Array Constraints**
+  - `minItems`: Minimum number of items in an array.
+  - `maxItems`: Maximum number of items in an array.
+
+```
+{
+  "type": "array",
+  "minItems": 5,
+  "maxItems": 10
+}
+```
+
+## Nested Structures :-
 
 - **Nested Objects**: Use the `properties` keyword to define an object within an object.
 ```
@@ -125,10 +140,3 @@ Example:-
   }
 }
 ```
-
-
-
-
-
-
-
