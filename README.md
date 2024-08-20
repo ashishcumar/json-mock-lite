@@ -2,6 +2,11 @@
 
 `json-mock-lite` is a lightweight javascript package for generating sample JSON data based on custom JSON Schema definitions. Ideal for testing and development, this package allows you to create realistic mock data that adheres to your specified schema structure.
 
+![Build](https://img.shields.io/github/actions/workflow/status/ashishcumar/json-mock-lite/publish.yml)
+![Lightweight](https://img.shields.io/badge/lightweight-12kb-green)
+![Fast](https://img.shields.io/badge/fast-12kb-blue)
+![Npm-Version](https://img.shields.io/npm/v/json-mock-lite.svg)
+
 ## Features
 
 * Generate sample JSON data based on custom JSON Schema definitions
@@ -18,7 +23,7 @@ npm install json-mock-lite
 ## Usage
 
 ```
-import mock from "json-mock-lite";
+import {mock} from "json-mock-lite";
 
 const schema = {
   type: 'object',
